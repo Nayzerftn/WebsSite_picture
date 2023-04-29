@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<title>Sunset 8K</title>
+
+<head>
+
+
+<body>
+    <style>
+        body{
+            background-color: rgb(48, 48, 48);
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .container{
+            height: 270px;
+            width: cover;
+            margin: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+        }
+
+        .box_1{
+            height: 200px;
+            width: 400px;
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 0px 0px 2px 2px black;
+            background-image: url('beach_1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-right: 40px;
+        }
+
+        .box_2{
+            height: 200px;
+            width: 400px;
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 0px 0px 2px 2px black;
+            background-image: url('beach_2.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-right: 40px;
+
+        }
+
+        .box_3{
+            height: 200px;
+            width: 400px;
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 0px 0px 2px 2px black;
+            background-image: url('beach_3.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .button_download{
+            font-size: 35px;
+            font-family: monospace;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: rgb(226, 162, 17);
+            background-color: transparent;
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 0px 0px 2px 2px black;
+            margin: 233px 60px;
+            padding: 5px 10px;
+            cursor: pointer;
+            width: 65%;
+            transition: all 1s ease;
+        }
+
+        .button_download:hover{
+            background-color: white;
+        }
+
+        .container_2{
+            height: 270px;
+            width: cover;
+            margin: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+    </style>
+</body>
+
+<body>
+    <div class="container">
+        <div class="box_1">
+            <div class="button_download" onclick="downloadJpg('beach_1.jpg')">Download</div>
+        </div>
+        <div class="box_2">
+            <div class="button_download" onclick="downloadJpg('beach_2.jpg')">Download</div>
+        </div>
+        <div class="box_3">
+            <div class="button_download" onclick="downloadJpg('beach_3.jpg')">Download</div>
+        </div>
+    </div>
+
+    <div class="container_2">
+        <div class="box_1" style="background-image: url('beach_4.jpg');">
+            <div class="button_download" onclick="downloadJpg('beach_4.jpg')">Download</div>
+        </div>
+
+        <div class="box_2" style="background-image: url('beach_5.jpg');">
+            <div class="button_download" onclick="downloadJpg('beach_5.jpg')">Download</div>
+        </div>
+
+        <div class="box_3" style="background-image: url('beach_6.jpg');">
+            <div class="button_download" onclick="downloadJpg('beach_6.jpg')">Download</div>
+        </div>
+    </div>
+  
+</body>
+
+
+<script>
+    function downloadJpg(url) {
+      fetch(url)
+        .then(response => response.blob())
+        .then(blob => {
+          const a = document.createElement("a");
+          a.href = URL.createObjectURL(blob);
+          a.download = "image.jpg";
+          a.click();
+        });
+    }
+</script>
+
+
+</head>
+</html>

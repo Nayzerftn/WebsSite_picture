@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>EthicalHacker</title>
+
+<style>
+
+    body{
+        height: 630px;
+        width: 100%;
+        background-color: rgb(48, 48, 48);
+        margin: 0;
+        
+    }
+
+    .marg{
+        height: 100px;
+        width: 100%;
+        border-bottom: 2px solid black;
+        border-color: black; 
+        background-color: rgb(48, 48, 48);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(226, 162, 17);
+        font-size: 70px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        padding: 5px; 
+    }
+
+    .box-main{
+        margin: 0;
+        background-color: rgb(48, 48, 48);
+        background-repeat: no-repeat;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button_sunset{
+        width: 20%;
+        border: 1px solid rgb(226, 162, 17);
+        border-radius: 5px;
+        box-shadow: 0px 0px 2px 2px rgb(226, 162, 17);
+        padding: 5px;
+        cursor: pointer;
+        font-size: 40px;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: rgb(226, 162, 17);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 40px; 
+        margin-bottom: 15px;
+    }
+
+    @keyframes neon{
+        from {
+            text-shadow: none;
+            transform: scale(1);
+        }
+        to {
+            transform: scale(1.2);
+            box-shadow: 0 0 20px rgb(226, 162, 17), 0 0 40px rgb(226, 162, 17), 0 0 50px rgb(226, 162, 17);
+            text-shadow: 0 0 20px rgb(226, 162, 17), 0 0 20px rgb(226, 162, 17), 0 0 20px rgb(226, 162, 17);
+            border-radius: 20px;
+        }
+        }
+
+    .button_sunset:hover {
+        animation: neon .2s linear forwards;
+    }
+
+
+    .button_motorcycle{
+        width: 20%;
+        border: 1px solid rgb(226, 162, 17);
+        border-radius: 5px;
+        box-shadow: 0px 0px 2px 2px rgb(226, 162, 17);
+        padding: 5px;
+        cursor: pointer;
+        font-size: 40px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: rgb(226, 162, 17);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 40px; 
+        margin-bottom: 20px; 
+    }
+
+    @keyframes neon_1{
+        from{
+            text-shadow: none;
+            transform: scale(1);
+        }
+
+        to{
+            transform: scale(1.2);
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgb(226, 162, 17), 0 0 40px rgb(226, 162, 17), 0 0 50px rgb(226, 162, 17);
+            text-shadow: 0 0 20px rgb(226, 162, 17), 0 0 20px rgb(226, 162, 17), 0 0 20px rgb(226, 162, 17);
+        }
+
+
+    }
+
+    .button_motorcycle:hover{
+        animation: neon_1 .2s linear forwards ;
+    }
+
+
+    .button_city{
+        width: 20%;
+        color: rgb(226, 162, 17);
+        border: 1px solid rgb(226, 162, 17);
+        border-radius: 5px;
+        box-shadow: 0px 0px 2px 2px rgb(226, 162, 17);
+        font-size: 40px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        padding: 5px;
+        margin: 40px;
+        margin-bottom: 20px;
+    }
+
+    @keyframes neon_2{
+        from{
+          transform: scale(1);
+          text-shadow: none;
+        }
+
+        to{
+            transform: scale(1.2);
+            border-radius: 25px;
+            box-shadow: 0 0 20px rgb(226, 162, 17), 0 0 40px rgb(226, 162, 17), 0 0 50px rgb(226, 162, 17);
+            text-shadow: 0 0 20px rgb(226, 162, 17), 0 0 20px rgb(226, 162, 17), 0 0 20px rgb(226, 162, 17);
+
+        }
+
+
+    }
+
+    .button_city:hover{
+        animation: neon_2 .2s linear forwards;
+    }
+
+    .button_beach{
+        width: 20%;
+        color: rgb(226, 162, 17);
+        border: 1px solid rgb(226, 162, 17);
+        border-radius: 5px;
+        box-shadow: 0px 0px 2px 2px rgb(226, 162, 17);
+        font-size: 40px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        margin: 40px;
+        cursor: pointer;
+    }
+
+    @keyframes neon_3{
+        from{
+            transform: scale(1);
+            text-shadow: none;
+        }
+
+        to{
+            transform: scale(1.2);
+            border-radius: 25px;
+            box-shadow: 0 0 20px rgb(226, 162, 17), 0 0 40px rgb(226, 162, 17), 0 0 50px rgb(226, 162, 17);
+            text-shadow: 0 0 20px rgb(226, 162, 17), 0 0 20px rgb(226, 162, 17), 0 0 20px rgb(226, 162, 17);
+        }
+    }
+
+    .button_beach:hover{
+        animation: neon_3 .2s linear forwards;
+    }
+
+    .button_hacker{
+        width: 20%;
+        border: 1px solid rgb(226, 162, 17);
+        border-radius: 5px;
+        box-shadow: 0px 0px 2px 2px rgb(226, 162, 17);
+        padding: 5px;
+        cursor: pointer;
+        font-size: 40px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: rgb(226, 162, 17);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: -451px 390px; 
+        margin-bottom: 15px;  
+        margin-right: 40px;
+    }
+
+    @keyframes neon_4{
+        from{
+            transform: scale(1);
+            text-shadow: none;
+        }
+
+        to{
+            transform: scale(1.2);
+            border-radius: 25px;
+            box-shadow: 0 0 20px rgb(226, 162, 17), 0 0 40px rgb(226, 162, 17), 0 0 50px rgb(226, 162, 17);
+            text-shadow: 0 0 20px rgb(226, 162, 17), 0 0 20px rgb(226, 162, 17), 0 0 20px rgb(226, 162, 17);
+        }
+    }
+
+    .button_hacker:hover{
+        animation: neon_4 .2s linear forwards;
+    }
+
+</style>
+
+    
+</head>
+<body>
+<div class="marg">Picture 4k</div>
+
+
+<div class="box-main">
+    <div class="button_sunset" onclick="window.location.href='Sunsets.html'">Sunsets</div>
+    <div class="button_motorcycle" onclick="window.location.href='Motorcycles.html'">Motorcycles</div>
+    <div class="button_city" onclick="window.location.href='Citys.html'">Citys</div>
+    <div class="button_beach" onclick="window.location.href='Beachs.html'">Beachs</div>
+    <div class="button_hacker" onclick="window.location.href='Cars.html'">Cars</div>
+</div>
+</body>
+</html>
